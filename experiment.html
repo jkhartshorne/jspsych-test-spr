@@ -18,7 +18,8 @@
     const jsPsych = initJsPsych({
       on_finish: function() {
         jsPsych.data.displayData();
-      }
+      },
+      on_trial_finish: (data) => console.log(data)
     });
 
     // Construct the timeline inside this function just as you would in jsPsych v7.x
